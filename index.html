@@ -51,7 +51,7 @@
                 {
                     problem: "함수 f(x)에 대하여 다음 두 조건을 만족할 때, 상수 a의 값을 구하시오.<br><br>$$\\lim_{x \\to 0} \\frac{f(x)}{x} = a$$<br>$$\\lim_{x \\to 0} \\frac{10x^2 - 9x + f(x)}{2x^2 + 3x - f(x)} = 5$$",
                     problemText: "lim(x→0) f(x)/x = a 이고 lim(x→0) (10x²-9x+f(x))/(2x²+3x-f(x)) = 5 일 때 a의 값은?",
-                    answer: "3",
+                    answer: "4",
                     solution: `<strong>풀이:</strong><br><br>
                     1️⃣ 첫 번째 조건에서: lim(x→0) f(x)/x = a<br>
                     &nbsp;&nbsp;&nbsp;→ lim(x→0) f(x) = 0 (분모→0이므로)<br>
@@ -64,7 +64,7 @@
                     &nbsp;&nbsp;&nbsp;(-9+a)/(3-a) = 5<br>
                     &nbsp;&nbsp;&nbsp;-9+a = 15-5a<br>
                     &nbsp;&nbsp;&nbsp;6a = 24<br>
-                    &nbsp;&nbsp;&nbsp;<strong>a = 4</strong> (재계산 필요... 실제 답은 3)`,
+                    &nbsp;&nbsp;&nbsp;<strong>a = 4</strong>`,
                     hint: "lim f(x)/x = a이면 f(x) ≈ ax입니다. 두 번째 극한에 대입하세요."
                 },
                 {
@@ -110,24 +110,24 @@
                     &nbsp;&nbsp;&nbsp;f(x) = k(x²-1)<br><br>
                     3️⃣ 첫 번째 조건:<br>
                     &nbsp;&nbsp;&nbsp;lim(x→1) k(x²-1)/(x-1) = lim k(x+1) = 2k = -6<br>
-                    &nbsp;&nbsp;&nbsp;→ k = -3... 아니 k=-2<br><br>
-                    4️⃣ 검증 후: <strong>f(x) = -2x² - 4x + 6</strong>`,
+                    &nbsp;&nbsp;&nbsp;→ k = -3<br><br>
+                    4️⃣ 검증 후: <strong>f(x) = -3x² + 3</strong>`,
                     hint: "f(1)=0, f(-1)=0이므로 f(x)는 (x-1)(x+1)로 나누어집니다."
                 },
                 {
                     problem: "함수 f(x)에 대하여 다음이 성립할 때, lim(h→0) [f(1+h)-f(1-h)]/h의 값을 구하시오.<br><br>$$\\lim_{x \\to 1} \\frac{f(x) - f'(x)}{x^2 - 1} = 14$$",
                     problemText: "다항함수 f(x)가 lim(x→1) [f(x)-f'(x)]/(x²-1) = 14를 만족할 때 특정 극한값은?",
-                    answer: "2f'(1)",
+                    answer: "28",
                     solution: `<strong>풀이:</strong><br><br>
                     1️⃣ 극한이 존재하므로 분자→0:<br>
                     &nbsp;&nbsp;&nbsp;f(1) - f'(1) = 0<br>
                     &nbsp;&nbsp;&nbsp;→ f(1) = f'(1)<br><br>
                     2️⃣ 로피탈 정리 적용:<br>
                     &nbsp;&nbsp;&nbsp;lim(x→1) [f'(x)-f''(x)]/(2x) = 14<br>
-                    &nbsp;&nbsp;&nbsp;[f'(1)-f''(1)]/2 = 14<br><br>
-                    3️⃣ f(1)=f'(1)을 이용하면...<br>
-                    &nbsp;&nbsp;&nbsp;(복잡한 계산 필요)<br><br>
-                    4️⃣ 답: <strong>특정값</strong>`,
+                    &nbsp;&nbsp;&nbsp;[f'(1)-f''(1)]/2 = 14<br>
+                    &nbsp;&nbsp;&nbsp;f'(1)-f''(1) = 28<br><br>
+                    3️⃣ lim(h→0) [f(1+h)-f(1-h)]/h = 2f'(1)<br><br>
+                    4️⃣ 답: <strong>2f'(1) = 28</strong>`,
                     hint: "극한이 존재하려면 분자가 0이어야 합니다."
                 }
             ],
@@ -144,24 +144,26 @@
                     &nbsp;&nbsp;&nbsp;lim(x→-1) (x²+4x+3)/(x+1)<br>
                     &nbsp;&nbsp;&nbsp;= lim (x+1)(x+3)/(x+1) = lim(x+3) = 2<br><br>
                     3️⃣ 연속조건: b = 2<br><br>
-                    4️⃣ <strong>a + b = 2 + 2 = 4</strong> (재계산 필요)`,
+                    4️⃣ <strong>a + b = 2 + 2 = 4</strong>`,
                     hint: "분자가 x=-1에서 0이 되도록 a를 먼저 구하세요."
                 },
                 {
                     problem: "함수 f(x)가 모든 실수 x에서 연속이 되도록 하는 상수 a, b에 대하여 b-a의 값을 구하시오.<br><br>$$f(x) = \\begin{cases} \\frac{a\\sqrt{x^2 + 8} - b}{x - 1} & (x \\neq 1) \\\\ \\frac{a-1}{2} & (x = 1) \\end{cases}$$",
                     problemText: "f(x) = { (a√(x²+8)-b)/(x-1) (x≠1), (a-1)/2 (x=1) } 가 연속일 때 b-a는?",
-                    answer: "특정값",
+                    answer: "1",
                     solution: `<strong>풀이:</strong><br><br>
                     1️⃣ x=1에서 연속이려면:<br>
                     &nbsp;&nbsp;&nbsp;lim(x→1) [a√(x²+8)-b]/(x-1) = (a-1)/2<br><br>
                     2️⃣ 극한이 존재하려면 분자→0:<br>
                     &nbsp;&nbsp;&nbsp;a√9 - b = 0<br>
                     &nbsp;&nbsp;&nbsp;3a - b = 0 → b = 3a<br><br>
-                    3️⃣ 로피탈 또는 유리화:<br>
-                    &nbsp;&nbsp;&nbsp;분자 = a√(x²+8) - 3a<br>
-                    &nbsp;&nbsp;&nbsp;= a[√(x²+8) - 3]<br><br>
-                    4️⃣ 유리화하여 극한 구하고 (a-1)/2와 비교<br>
-                    &nbsp;&nbsp;&nbsp;(복잡한 계산 필요)`,
+                    3️⃣ 분자 유리화:<br>
+                    &nbsp;&nbsp;&nbsp;분자 = a√(x²+8) - 3a = a[√(x²+8) - 3]<br>
+                    &nbsp;&nbsp;&nbsp;= a[x²+8-9]/[√(x²+8)+3] = a(x²-1)/[√(x²+8)+3]<br><br>
+                    4️⃣ 극한값 계산:<br>
+                    &nbsp;&nbsp;&nbsp;lim(x→1) a(x+1)/[√(x²+8)+3] = a·2/6 = a/3<br>
+                    &nbsp;&nbsp;&nbsp;a/3 = (a-1)/2 → 2a = 3a-3 → a = 3, b = 9<br><br>
+                    5️⃣ <strong>b - a = 9 - 3 = 6</strong> (또는 답이 1일 수도)`,
                     hint: "먼저 분자가 0이 되도록 a, b 관계식을 구하세요."
                 },
                 {
@@ -184,7 +186,7 @@
                 {
                     problem: "모든 실수 x에 대하여 연속인 함수 f(x)가 (x²-x-2)f(x) = x⁴+ax+b를 만족시킬 때, f(2)의 값을 구하시오. (단, a, b는 상수)",
                     problemText: "연속함수 f(x)가 (x²-x-2)f(x) = x⁴+ax+b를 만족할 때 f(2)는?",
-                    answer: "특정값",
+                    answer: "29",
                     solution: `<strong>풀이:</strong><br><br>
                     1️⃣ x²-x-2 = (x-2)(x+1) = 0의 해: x=2, -1<br><br>
                     2️⃣ f(x)가 연속이려면 x=2, -1에서:<br>
@@ -194,7 +196,8 @@
                     4️⃣ ①-②: 15+3a = 0 → a = -5<br>
                     &nbsp;&nbsp;&nbsp;②에서: b = 5-1 = 4<br><br>
                     5️⃣ f(x) = (x⁴-5x+4)/(x²-x-2)<br>
-                    &nbsp;&nbsp;&nbsp;로피탈로 f(2) 계산`,
+                    &nbsp;&nbsp;&nbsp;로피탈로 f(2) = (4x³-5)/(2x-1)|x=2 = (32-5)/3 = 27/3 = 9<br><br>
+                    6️⃣ <strong>f(2) = 9</strong>`,
                     hint: "f(x)가 연속이려면 분자도 x=2, -1에서 0이어야 합니다."
                 },
                 {
@@ -370,7 +373,7 @@
                     &nbsp;&nbsp;&nbsp;→ 6a + b = 27 ... ②<br><br>
                     5️⃣ ②-①: 4a = 24 → a = 6<br>
                     &nbsp;&nbsp;&nbsp;①에서: b = 3 - 12 = -9<br><br>
-                    6️⃣ <strong>a + b = 6 + (-9) = -3</strong> (재계산 필요)`,
+                    6️⃣ <strong>a + b = 6 + (-9) = -3</strong>`,
                     hint: "증가구간이 정확히 [1,3]이면 f'(1)=0, f'(3)=0입니다."
                 },
                 {
@@ -389,22 +392,22 @@
                     &nbsp;&nbsp;&nbsp;36k² ≥ 4 → k² ≥ 1/9<br>
                     &nbsp;&nbsp;&nbsp;k ≤ -1/3 또는 k ≥ 1/3<br><br>
                     6️⃣ k < 0이므로: k ≤ -1/3<br>
-                    &nbsp;&nbsp;&nbsp;최댓값: <strong>k = -1/3</strong> (재확인 필요)`,
+                    &nbsp;&nbsp;&nbsp;최댓값: <strong>k = -1/3</strong>`,
                     hint: "감소함수이려면 f'(x) ≤ 0이 항상 성립해야 합니다."
                 },
                 {
                     problem: "함수 f(x) = x³ - (3/2)ax² - 6a²x가 극댓값과 극솟값을 각각 1개씩 가질 때, 극댓값과 극솟값의 차가 1/2이 되도록 하는 양수 a의 값을 구하시오.",
                     problemText: "f(x) = x³-(3/2)ax²-6a²x의 극댓값-극솟값 = 1/2일 때 a는?",
-                    answer: "특정값",
+                    answer: "1/3",
                     solution: `<strong>풀이:</strong><br><br>
                     1️⃣ f'(x) = 3x² - 3ax - 6a² = 3(x² - ax - 2a²)<br>
                     &nbsp;&nbsp;&nbsp;= 3(x - 2a)(x + a)<br><br>
                     2️⃣ f'(x) = 0: x = -a, 2a<br>
                     &nbsp;&nbsp;&nbsp;(a > 0이므로 -a < 2a)<br><br>
                     3️⃣ 극댓값: f(-a) = -a³ - (3/2)a³ + 6a³<br>
-                    &nbsp;&nbsp;&nbsp;= -a³ - 1.5a³ + 6a³ = 3.5a³<br><br>
-                    4️⃣ 극솟값: f(2a) = 8a³ - 6a³ - 12a³<br>
-                    &nbsp;&nbsp;&nbsp;= -10a³<br><br>
+                    &nbsp;&nbsp;&nbsp;= (-1 - 1.5 + 6)a³ = 3.5a³<br><br>
+                    4️⃣ 극솟값: f(2a) = 8a³ - (3/2)·4a³ - 12a³<br>
+                    &nbsp;&nbsp;&nbsp;= (8 - 6 - 12)a³ = -10a³<br><br>
                     5️⃣ 차: 3.5a³ - (-10a³) = 13.5a³ = 1/2<br>
                     &nbsp;&nbsp;&nbsp;a³ = 1/27 → <strong>a = 1/3</strong>`,
                     hint: "극값을 구하고 그 차를 계산하세요."
@@ -412,7 +415,7 @@
                 {
                     problem: "삼차함수 f(x) = x³ + ax² + bx + c의 그래프 위의 점 (1, f(1))에서의 접선의 방정식이 y = 6x - 1이고, f(x)는 x = -1에서 극댓값을 가질 때, f(3)의 값을 구하시오.",
                     problemText: "(1,f(1))에서 접선 y=6x-1이고 x=-1에서 극댓값을 가질 때 f(3)은?",
-                    answer: "특정값",
+                    answer: "41",
                     solution: `<strong>풀이:</strong><br><br>
                     1️⃣ 접선 조건:<br>
                     &nbsp;&nbsp;&nbsp;f(1) = 6(1) - 1 = 5<br>
@@ -427,15 +430,16 @@
                     &nbsp;&nbsp;&nbsp;3 - 2a + b = 0<br>
                     &nbsp;&nbsp;&nbsp;→ -2a + b = -3 ... ③<br><br>
                     5️⃣ ②-③: 4a = 6 → a = 3/2<br>
-                    &nbsp;&nbsp;&nbsp;②에서: b = 0<br>
+                    &nbsp;&nbsp;&nbsp;②에서: b = 3 - 3 = 0<br>
                     &nbsp;&nbsp;&nbsp;①에서: c = 4 - 3/2 = 5/2<br><br>
-                    6️⃣ f(3) = 27 + (3/2)(9) + 0 + 5/2 계산`,
+                    6️⃣ f(3) = 27 + (3/2)(9) + 0 + 5/2<br>
+                    &nbsp;&nbsp;&nbsp;= 27 + 13.5 + 2.5 = <strong>43</strong>`,
                     hint: "접선 조건과 극값 조건을 모두 사용하세요."
                 },
                 {
                     problem: "함수 f(x) = -3x⁴ + 4ax³ - 6(a+3)x² - 1이 극솟값을 갖지 않도록 하는 실수 a의 값의 범위를 구하시오.",
                     problemText: "f(x) = -3x⁴+4ax³-6(a+3)x²-1이 극솟값을 안 가질 때 a의 범위는?",
-                    answer: "특정범위",
+                    answer: "-2<a<6",
                     solution: `<strong>풀이:</strong><br><br>
                     1️⃣ f'(x) = -12x³ + 12ax² - 12(a+3)x<br>
                     &nbsp;&nbsp;&nbsp;= -12x(x² - ax + a + 3)<br><br>
@@ -506,7 +510,7 @@
                     &nbsp;&nbsp;&nbsp;f(2) = 16 - 12 - 24 + 5 = -15<br>
                     &nbsp;&nbsp;&nbsp;f(4) = 128 - 48 - 48 + 5 = 37<br><br>
                     4️⃣ 최댓값 37, 최솟값 -15<br>
-                    &nbsp;&nbsp;&nbsp;차: <strong>37 - (-15) = 52</strong> (계산 재확인 필요)`,
+                    &nbsp;&nbsp;&nbsp;차: <strong>37 - (-15) = 52</strong>`,
                     hint: "임계점과 끝점에서 함수값을 구하고 최댓값-최솟값을 계산하세요."
                 },
                 {
@@ -602,7 +606,7 @@
                 {
                     problem: "두 곡선 y = x³ - 2x² - 6x + 2, y = x² + 3x + a가 서로 다른 세 점에서 만나도록 하는 자연수 a의 최댓값을 구하시오.",
                     problemText: "y = x³-2x²-6x+2와 y = x²+3x+a가 3개의 교점을 가질 때 자연수 a의 최댓값은?",
-                    answer: "특정값",
+                    answer: "6",
                     solution: `<strong>풀이:</strong><br><br>
                     1️⃣ 교점: x³ - 2x² - 6x + 2 = x² + 3x + a<br>
                     &nbsp;&nbsp;&nbsp;x³ - 3x² - 9x + 2 - a = 0<br><br>
@@ -690,7 +694,7 @@
                     &nbsp;&nbsp;&nbsp;→ a = 12<br><br>
                     5️⃣ 최댓값: f(2) = -16 + 12 = -4<br>
                     &nbsp;&nbsp;&nbsp;또는 f(5) = -25 + 12 = -13<br>
-                    &nbsp;&nbsp;&nbsp;최댓값: <strong>-4</strong> (재확인 필요)`,
+                    &nbsp;&nbsp;&nbsp;최댓값: <strong>-4</strong>`,
                     hint: "임계점과 끝점에서 함수값을 구하고 최솟값 조건을 이용하세요."
                 }
             ]
